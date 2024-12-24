@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--
+    switch case  
+
+     -->
+    <script>
+
+function calc(){
+
+
+        var operators=(prompt("enter a operator (+,-,*,/):"))
+        var num1=Number(prompt("enter a number:"))
+        var num2=Number(prompt("enter a number:"))
+        switch(operators){
+            case "+":
+               document.write("addition="+(num1+num2))
+               break;
+            case "-":
+                document.write("subtraction="+(num1-num2))
+                break;
+            case "*":
+                document.write("multiplication="+(num1*num2))
+                break;
+            case "/":
+                document.write("division="+(num1/num2))
+                break;
+            default :
+            document.write("invalid operator")
+        }
+
+    }
+    // calc()
+
+    // loop 
+    // 1-20 -> odd output
+    
+    for(var j=1;j<=20;j++){
+        if(j%2!=0){
+            document.write(j+"odd <br>")
+        }
+    }
+    var sum=0;
+    for(var j=1;j<=20;j++){
+        sum=sum+j
+    }
+    document.write("sum="+sum)
+    // sum
+
+    
+    </script>
+
+</body>
+</html>

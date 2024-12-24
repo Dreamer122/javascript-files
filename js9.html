@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- loop 
+it is used to execute a statement or group of statements according
+ to the specified conditions .
+
+ types of loop :-
+1. for loop
+2. while loop
+3. do while loop
+
+
+1. for loop :-
+for (initialization; condition; increment/decrement){
+    statement
+}
+    increment -> i++ -> i=i+1
+    decrement -> i-- -> i=i-1
+-->
+
+<button onclick="table()">table</button>
+<p id="result">hello</p>
+
+<script>
+
+    // for (var k=1;k<=10;k++){ // k=2,3,10,11
+    //     document.write(k+"hello <br>");
+    // }
+
+    // for (var i=10;i>=1;i--){ // k=2,3,10,11
+    //     document.write(i+"hello <br>");
+    // }
+    // a+=1
+
+    function table(){
+       var num=parseInt(prompt("enter a number"));
+       for (var start=1;start<=10;start++){
+        // document.write(num*start+"<br>")
+        document.getElementById("result").innerHTML+=num*start+"<br>"
+       }
+    }
+
+</script>
+
+</body>
+</html>

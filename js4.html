@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()"> click to add</button>
+    <button onclick="area_circle()">circle</button>
+    <p id="result"></p>
+    <h2 id="show"></h2>
+    <button onclick="compare()">compare</button>
+    
+    <!-- function
+    -> it is block of code which perform some task 
+    
+    syntax -> 
+    1. function declaration
+    2. calling 
+
+function rectangle(){
+code
+}
+    -->
+<script>
+    function add(){
+        alert("hello im function")
+    }
+   // add() // calling 
+   function area_circle(){
+    var radius=Number(prompt("enter radius="))
+    // document.write("area="+radius)
+//   var element= document.getElementById("result")
+//   console.log(element)
+//   element.innerHTML="area= <span>"+(3.14*radius*radius)+"</span>";
+document.getElementById("result").innerHTML="area= <span>"+(3.14*radius*radius)+"</span>";
+   }
+
+//    relational operator -> it compare two or more than two value related to each other
+//    ==, !=, >, <, >=, <=, ===, !==,
+
+// a=10
+// b="10"
+// a==b -> true
+// a===b=>  datatype and value false
+// a>b
+// a<b
+// a>=b
+// a<=b
+// a!=b
+
+function compare(){
+    var num1=10
+    var num2=20;
+    document.getElementById("show").innerHTML=num1>num2
+}
+
+</script>
+
+</body>
+</html>

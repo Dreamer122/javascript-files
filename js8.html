@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="iit()">
+        call iit
+    </button>
+    <button onclick="quadratic()">equation</button>
+    <p id="result"></p>
+    <!-- question -> 
+    12marks 
+    jeemains
+    advance 
+    -->
+
+    <script>
+        function iit(){
+            var marks12=Number(prompt("enter marks of 12th class"))
+            if(marks12>70){
+                alert("you are eligible for jeemains")
+                var jeemains=Number(prompt("enter marks of jee mains"))
+                if(jeemains>55){
+                    alert("you are eligible for advance")
+
+            }
+            else{
+                alert("you are not eligible for jee advance")
+            }
+        }
+        else{
+            alert("you are not eligible for jeemains")
+        }
+        }
+        function quadratic(){
+            var a=Number(prompt("enter value of a"))
+            var b=Number(prompt("enter value of b"))
+            var c=Number(prompt("enter value of c"))
+            var d=b**2-(4*a*c)
+            if(d>0){
+                var d1=-b+((d)**0.5)/2*a
+                var d2=-b-((d)**0.5)/2*a
+                document.getElementById("result").innerHTML="two solutions are possible d1="+d1+" d2="+d2
+            }
+            else if(d<0){
+            document.getElementById("result").innerHTML="no solutions are possible ";
+            
+        }
+        else{
+            var d1=-b+((d)**0.5)/2*a
+
+            document.getElementById("result").innerHTML="one solution is possible d1="+d1;
+            
+        }
+    }
+    </script>
+</body>
+</html>

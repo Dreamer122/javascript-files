@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num1" placeholder="enter num1">
+    <input type="text" id="num2" placeholder="enter num2"> <br>
+    <input type="text" id="op" placeholder="enter operator +,-,*,/"> <br>
+    <button onclick="main()">calculate</button> 
+    <h2 id="result"> result will show here:</h2>
+    <!-- function  -->
+
+<script>
+    function add(num1,num2){
+        return(num1+num2)
+    }
+    function sub(num1,num2){
+        return (num1- num2)
+    }
+    function mul(num1,num2){
+        return (num1*num2)
+    }
+    function divide(num1,num2){
+        return(num1/num2)
+    }
+function cont(){
+    let choice=Number(prompt("enter 1 to continue 2 for exit"))
+    if(choice==1){
+        main()
+    }
+    else{
+        alert("thank you!")
+    }
+}
+
+    function main(){
+        // let a=Number(document.getElementById("num1").value);
+        // let b=Number(document.getElementById("num2").value);
+        // let op=document.getElementById("op").value;
+        let a=Number(prompt("enter number1"))
+        let b=Number(prompt("enter number2"))
+        let op=prompt("enter operator")
+        if(op=="+"){
+            let sol=add(a,b)
+           alert("sol="+sol)
+            // document.getElementById("result").innerText="addition ="+sol
+        }
+        else if(op=="-"){
+            let sol=sub(a,b)
+           alert("sol="+sol)
+            // document.getElementById("result").innerText="subtraction ="+sol
+
+
+        }
+        else if(op=="*"){
+            let sol=mul(a,b)
+           alert("sol="+sol)
+            // document.getElementById("result").innerText="multiply ="+sol
+
+
+        }
+        else if(op=="/"){
+            let sol=divide(a,b)
+           alert("sol="+sol)
+            // document.getElementById("result").innerText="divide ="+sol
+
+
+        }
+        else{
+            alert("invaid operator")
+        }
+        cont()
+
+    }
+
+//array -> 
+
+let array=[7,9,"js",90.5,"react js"]
+
+console.log(array.length)
+// accessing elements 
+console.log(array[1],array[4])
+let ele=array[2]
+
+// 
+console.log(array.indexOf(90.5))
+// add elements 
+array.push(100)
+array.unshift("node js")
+console.log(array)
+// delete elements 
+
+array.pop()
+array.shift()
+console.log(array)
+
+// mid add/ delete
+
+// array.splice(index,deletecount,elements)
+array.splice(2,0,"node js","express")
+console.log(array)
+array.splice(3,1)
+console.log(array)
+array.splice(4,1,"javascript")
+console.log(array)
+
+
+</script>
+
+</body>
+</html>

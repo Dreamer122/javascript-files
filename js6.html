@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="marks" placeholder="enter marks">
+    <button onclick="grading()"> grade</button>
+    <h2 id="result"></h2>
+<!-- else if -->
+ <script>
+function grading(){
+    var marks=Number(document.getElementById("marks").value);
+    if(marks>=80){
+        document.getElementById("result").innerHTML="Grade A";
+    }
+    else if(marks>=65){
+        document.getElementById("result").innerHTML="Grade B";
+
+    }
+    else if(marks>=40){
+        document.getElementById("result").innerHTML="Grade C";
+    }
+    else{
+        document.getElementById("result").innerHTML="Grade F";
+    }
+}
+
+
+
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- nested loop  
+    prime no between 1-100 
+    -->
+    <button onclick="prime()">prime</button>
+    <button onclick="nestedloop()">nested loop</button>
+    <script>
+        function prime(){
+            for(var num=1;num<=100;num++){
+                var indicator=false;
+                var half=parseInt(num/2)
+                for(var k=2;k<=half;k++){
+                    if(num%k==0){
+                        indicator=true
+                        break
+                    }
+
+                }
+                if(!indicator){
+                    document.write(num+" is a prime number<br>");
+                }
+                
+
+            }
+        }
+
+        // 1 2 3 4
+        // 1 2 3 4
+        // 1 2 3 4
+
+        function nestedloop(){
+            for(var i=0;i<3;i++){
+                for(var j=1;j<=4;j++){
+                    document.write(j+" ")
+                }
+                document.write("<br>")
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

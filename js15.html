@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- array  -->
+     <script>
+
+        let array=[7,8,9,5,67,90,9]
+        // for loop 
+        for(let k=0;k<array.length;k++){
+            document.write(array[k] +"<br>")
+        }
+
+        // for of loop 
+        for(let j of array){
+            document.write(j+"<br>")
+
+        }
+
+        array.sort()
+        document.write(array+"<br>")
+
+        array.sort(function(a,b){return a-b}) // a-b -> callback function
+        document.write(array+"<br>")
+
+     let new_array=  array.concat([89,"array","js"])
+     document.write(new_array+"<br>")
+
+    let slices_of_array= array.slice(2,5);
+    
+    document.write(slices_of_array+"<br>");
+    let ispresent=array.includes(900)
+    document.write(ispresent+"<br>")
+
+        let joined_array=array.join(" ")
+     document.write(joined_array+"<br>")
+
+     let index=array.lastIndexOf(9)
+     document.write(index+"<br>"+array.indexOf(9)+"<br>")
+     
+
+
+    //  for each 
+    let sum=0;
+    array.forEach(function(value,index,array){
+        document.write("value="+value+" index="+index+"<br>")
+        sum+=value;
+    })
+    document.write("sum="+sum)
+
+    // filter 
+
+  let filtered_values= array.filter(function(v,i,a){
+    if(v%2==0){
+        
+        return v
+    }
+        // return(v>18)
+    })
+    document.write("filter="+filtered_values+"<br>")
+
+
+    // map 
+   let Newarray= array.map(function(v,i,a){
+    return (v>18)
+   })
+   document.write(Newarray+"<br>")
+
+
+//find
+ let output=  array.find(function(v,i,a){
+   return (v%2==0)
+    
+   })
+   document.write(output+"<br>")
+
+// multiply by 2 
+let myarray=[2, 4, 6, 8, 10];
+
+let mynewarray=myarray.map(function(v,i,a){
+    return v*2
+})
+document.write(mynewarray);
+
+
+     </script>
+</body>
+</html>

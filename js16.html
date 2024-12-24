@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let array=[89,90,67,45,45]
+      let i=  array.findIndex(function(v,i){
+            return (v==89)
+        })
+        document.write("index of 89="+i)
+        // let initialvalue=0
+
+       let v= array.reduce(function(prev,current,i,a){
+            return prev+current
+        })
+
+        // prev=89
+        // current=90
+        // prev=89+90
+        // current=67
+        // prev=89+90+67
+        // current=45
+        document.write("<br>"+v);
+
+        // arrow function
+            // function fun(){
+            //     task
+            // }
+            // let fun=()=>{
+            //     console.log("arrow function")
+            // }
+            // fun()
+            let fun=a=>console.log("arrow function",a)
+            fun(8)
+
+            let fun2=age=>(age+1)
+
+           console.log( fun2(67))
+
+
+          let g= array.reduce((acc,c,i)=>acc+c)
+          console.log(g)
+
+          function removeduplicacy(array){
+            let new_array=[]
+            for (let k of array){
+                if(!new_array.includes(k)){
+                    new_array.push(k)
+                }
+            }
+            return new_array
+          }
+
+          let unique=removeduplicacy([1, 2, 2, 3, 4, 4, 5, 6])
+          document.write("<br>"+unique)
+
+
+          let old_array=[11, 22, 33, 44, 55]
+        let oddarray=  old_array.filter((v,i)=>v%2!=0)
+        document.write(oddarray);
+    </script>
+
+</body>
+</html>

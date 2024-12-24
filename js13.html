@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var a=10;
+        var a=20; //redeclaration
+        a=34; // reassignment
+        console.log(a)
+
+        // let 
+        let b=10;
+        //let b=34; // no redeclaration
+        b=4; // reassignment
+        console.log(b)
+
+        // const 
+        const c=2;
+       // const c=6;// no redeclaration
+       // c=9;// no reassignment
+        console.log(c)
+
+        // scopes 
+
+       if(a>30){
+        // var d="block";
+        // let d="block";
+        const d="block"; // block scope
+        console.log(d); // block scoped
+       }
+     //  console.log(d)
+
+       // array  -> it is a ordered collection of heterogeneous elements
+       // and every element in array has a specific position called index.
+    //    index starts form 0 
+
+       let array=[67,89,8.9,"hello"];
+       document.write(array+"<br>");
+       console.log(array)
+       document.write(typeof (array)+"<br>");
+
+       /* functions ->
+       1. function without parameter without return 
+       2. function without parameter with return
+       3. function with parameter without return
+       4. function with parameter with return
+
+*/
+
+function getElementbyid(id){ // id parameter
+    console.log(id)
+
+}
+getElementbyid(67) // actual values . arguments 
+
+function sum(a,b){
+    console.log(a+b);
+    return (a+b)
+}
+
+let result=sum(6,7)
+console.log("outside function"+result)
+let f=90
+console.log(f-result)
+
+function solve(){
+    let age=90
+    let marks=78
+    let c=age-marks
+    return([age,marks])
+}
+
+let values=solve()
+console.log(values)
+
+
+//
+/*function add(a,b){
+    return (a+b)
+}
+main(){
+    let value1=
+    let value2=
+    let op=
+    if(op=="+"){
+       let res= add(value1,value2)
+
+    }
+}
+    */
+
+
+    </script>
+</body>
+</html>

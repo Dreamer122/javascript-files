@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- assignment  -->
+     <input type="text" id="salary" placeholder="enter salary"> <br>
+     <input type="text" id="years" placeholder="enter service years"> <br>
+     <button onclick="increment()">increment</button>
+     <p id="result"></p>
+     <script>
+        function increment(){
+            var salary=parseFloat(document.getElementById("salary").value);
+            var years=parseFloat(document.getElementById("years").value);
+            console.log(salary,years)
+
+            if(years>=10){
+
+                var bonus=salary*10/100;
+                var total=salary+bonus;
+                document.getElementById("result").innerHTML="total salary after increment of 10%="+total
+            }
+            else if(years>=6){
+                var bonus=salary*8/100;
+                var total=salary+bonus
+                document.getElementById("result").innerHTML="total salary after increment of 8%="+total
+
+            }
+            else{
+                var bonus=salary*5/100;
+                var total=salary+bonus
+                document.getElementById("result").innerHTML="total salary after increment of 5%="+total
+
+            }
+        }
+
+     </script>
+</body>
+</html>
