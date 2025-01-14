@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid #000;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            /* background-color: blueviolet; */
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click to create div</button>
+
+
+    <!-- create and delete element -->
+     <script>
+        // create element
+        function createele(){
+            let colors=["000957","344CB7","577BC1","FFEB00","69247C","DA498D","FAC67A"]
+            let c= Math.floor(Math.random()*colors.length)
+
+        let div=document.createElement("div")
+        div.innerText="this is div"
+        console.log(div)
+        div.classList.add("box")
+        div.style.backgroundColor="#"+colors[c]
+
+        // add div to body tag
+        document.body.append(div)
+
+        div.onclick=function(){
+            div.remove()
+        }
+    }
+
+    document.querySelector("#btn").addEventListener("click",createele)
+    
+    // todoapp 
+    
+    </script>
+</body>
+</html>

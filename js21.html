@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="roll">roll dice</button>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhhW3KptjKis-eOBpD_q9q14_GfI-h3yeckA&s" alt="">
+        <!-- math and date module -->
+
+        <script>
+            document.write(Math.PI+"<br>")
+            document.write(Math.SQRT1_2+"<br>")
+            document.write(Math.SQRT2+"<br>")
+            document.write(Math.sqrt(56)+"<br>")
+            document.write(Math.pow(6,4)+"<br>")
+            document.write(Math.cbrt(8)+"<br>")
+            document.write(Math.ceil(7.1)+"<br>")
+            document.write(Math.floor(-7.1)+"<br>")
+            document.write(Math.max(8,9,78,56)+"<br>")
+            document.write(Math.min(8,9,78,56)+"<br>")
+            document.write(Math.round(7.2)+"<br>")
+            document.write(Math.random()*6+"<br>")
+            document.write(Math.trunc(8.8)+"<br>")
+            document.write(Math.sin(Math.PI/180*90)+"<br>")
+            document.write(Math.cos(Math.PI/180*0)+"<br>")
+            document.write(Math.tan(Math.PI/180*45)+"<br>")
+            document.write(Math.log(10)+"<br>")
+            document.write(Math.log2(10)+"<br>")
+            document.write(Math.log10(10)+"<br>")
+
+
+            // date 
+            var date = new Date();
+            document.write(date+"<br>")
+            document.write(date.getFullYear()+"<br>")
+            document.write(date.getDay()+"<br>")
+            document.write(date.getMonth()+"<br>")
+            document.write(date.getHours()+"<br>")
+            document.write(date.toLocaleDateString()+"<br>")
+            document.write(date.toLocaleTimeString()+"<br>")
+            document.write(date.getTime()+"<br>")
+
+            // let d= new Date(2020,5,4,1,45,56)
+            let d= new Date()
+            d.setDate(26)
+            d.setFullYear(2026)
+            d.setHours(4)
+            document.write(d+"<br>")
+
+            // dice game 
+            function dice(){
+                let player1=Math.trunc(Math.random()*6)+1
+                let player2=Math.trunc(Math.random()*6)+1
+                // if(player1>player2){
+                //     document.write("Player 1 wins with "+player1+" vs "+player2+"<br>")
+                // }
+                // else if(player1==player2){
+                //     document.write("It's a tie with "+player1+" vs "+player2+"<br>")
+                // }
+                // else{
+                //     document.write("Player 2 wins with "+player2+" vs "+player1+"<br>")
+                // }
+                document.querySelector("img").src="./image"+player1+".png"
+            }
+            //  image1, image2 image3
+
+            document.querySelector("#roll").addEventListener("click",dice)
+
+
+            
+
+        </script>
+</body>
+</html>

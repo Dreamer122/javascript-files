@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <button id="event">event</button>
+
+      <p id="result"></p>
+      <button id="clear">cleartime</button>
+      <div class="childdiv">
+        <ul class="list">
+          <li>hello</li>
+          <li>js</li>
+          <li>css</li>
+          <li>react js</li>
+        </ul>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, amet.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, amet.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, amet.
+        </p>
+        <h1 class="heading">heading tag</h1>
+      </div>
+    </div>
+    <!-- dom traversing  -->
+
+    <input type="checkbox" name="course" id="html" value="html" />
+    <label for="html"> html</label>
+    <input type="checkbox" name="course" id="css" value="css" />
+    <label for="css"> css</label>
+    <input type="checkbox" name="course" id="js" value="js" />
+    <label for="js"> js</label>
+    <button id="btn">get value</button>
+
+
+    <input type="radio" name="gender" id="male" value="male"> <label for="male">male</label>
+    <input type="radio" name="gender" id="female" value="female"> <label for="female">female</label>
+    <script>
+      let list = document.querySelector(".list");
+      console.log(list);
+      console.log(list.parentElement);
+      list.parentElement.style.border = "2px solid red";
+      let children = list.children;
+      console.log(children[2]);
+      console.log(list.firstElementChild);
+      console.log(list.lastElementChild);
+      // sibling
+      let sib = list.nextElementSibling;
+      console.log(sib.previousElementSibling);
+
+      console.log(list.parentElement.parentElement);
+
+      let coursebox = document.getElementsByName("course");
+      console.log(coursebox);
+
+      document.querySelector("#btn").addEventListener("click", function () {
+        let values = "";
+        for (let i = 0; i < coursebox.length; i++) {
+          if (coursebox[i].checked) {
+            values += coursebox[i].value + ",";
+          }
+        }
+        console.log(values);
+        gender()
+      });
+
+      let radiobtn=document.getElementsByName("gender")
+      function gender(){
+        for (let i = 0; i < radiobtn.length; i++) {
+            if (radiobtn[i].checked) {
+                console.log(radiobtn[i].value)
+                }
+        }
+      }
+
+      function time(){
+        let date = new Date();
+        document.getElementsByClassName("heading")[0].innerHTML=date.toLocaleTimeString();
+
+      }
+     setInterval(time,1000)
+    </script>
+  </body>
+</html>

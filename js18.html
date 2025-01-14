@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- object
+    key:value pair 
+    key must unique 
+    -->
+
+    <script>
+        let person={
+            name:"piyush",
+            "name":"ajay",
+            "age":25,
+            hobbies:["reading","dancing"]
+        }
+        document.write(person.age) //access
+        document.write(person.name)
+        console.log(person)
+
+        //add remove replace
+        person.phone=23456789 //add
+        person.age=24 // replace
+
+        // access 
+       document.write( person["phone"],person["name"])
+       person["phone"]=987654
+    console.log(person)
+
+    delete person.phone
+    console.log(person)
+
+    // for in loop
+    for (let key in person) {
+        document.write("<br>"+key+"="+person[key])
+    }
+
+    document.write("<br>"+person.hobbies[0])
+
+const info={
+    username:"ajay",
+    lastname:"surname",
+    address:{
+        street:"abc",
+        city:"xyz",
+        state:"pqr"
+    }
+    ,
+    fullname:function(){
+        return this.username+ this.lastname
+    },
+    // fullname2:()=>{
+    //     return this.username+ this.lastname
+    // }
+}
+
+document.write("<br>"+info.address.state)
+document.write("<br>"+info.fullname())
+// document.write("<br>"+info.fullname2())
+
+
+//array string and object with constructor function
+// array constructor
+// a=[];
+let a=new Array(8)
+a[0]=8
+a[4]=7
+console.log(a)
+// string constructor
+let b=new String("hello")
+console.log(b)
+// object constructor
+let c=new Object()
+c.orderid=101
+console.log(c)
+
+let arr=[{a:"b"},{b:"h"}]
+    </script>
+</body>
+</html>

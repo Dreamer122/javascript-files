@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let string="aaabbbbccc"
+        let unique=[];
+        for (let i=0;i<string.length;i++){
+            if(!unique.includes(string[i])){
+                unique.push(string[i]);
+            }
+        }
+        console.log(unique);
+        let new_str=""
+        for (let k of unique){
+            let count=0
+            new_str+=k // a3b4c
+            for (let j=0;j<string.length;j++){
+                if(string[j]==k){
+                    count++;
+                    
+            }
+        }
+        new_str+=count // newstr= a3b4c3
+        }
+
+        console.log(new_str)
+    </script>
+</body>
+</html>

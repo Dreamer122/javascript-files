@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app{
+            width: max-content;
+            margin: auto;
+        }
+        .task{
+            display: flex;
+            place-items: center;
+            background-color: gainsboro;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<!-- todoapp -->
+ <div class="app">
+    <input type="text" placeholder="enter task✍️" id="taskinput"> <button class="addtask">Add task</button>
+    <div class="tasklist">
+       
+
+    </div>
+ </div>
+
+ <script>
+    function TodoApp(){
+        let inputbox=document.querySelector("#taskinput")
+        let tasklist=document.querySelector(".tasklist")
+        let div=document.createElement("div")
+        let ptag=document.createElement("p")
+        let editbtn=document.createElement("button");
+        let deletebtn=document.createElement("button");
+        ptag.innerText=inputbox.value;
+        ptag.contentEditable='false'
+        editbtn.innerText="edit"
+        deletebtn.innerText="Delete"
+        div.append(ptag)
+        div.append(editbtn)
+        div.append(deletebtn)
+        div.classList.add("task")
+        tasklist.append(div)
+        inputbox.value=""
+
+deletebtn.onclick=function(){
+    div.remove()
+}
+
+editbtn.onclick=function(){
+    let v=ptag.contentEditable
+    console.log(v) // false true
+    console.log(typeof(v))
+    if(v=='true'){ // false==true , true==true
+        ptag.contentEditable='false'
+        ptag.style.border=""
+    console.log("inside if")
+
+    
+
+    }
+    else{
+        ptag.style.border="1px solid darkgrey"
+        ptag.contentEditable='true'
+    console.log("inside else")
+
+    }
+}
+
+
+    }
+    let btn=document.querySelector(".addtask")
+    btn.addEventListener("click",TodoApp)
+ </script>
+
+</body>
+</html>

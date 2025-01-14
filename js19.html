@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="box"> DOM</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p class="box">The DOM is a W3C (World Wide Web Consortium) standard.
+
+        The DOM defines a standard for accessing documents:</p>
+      
+    <input type="text" name="username" value="" id="screen">
+    <!-- dom
+    document object model 
+
+    -->
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+    <button class="btn">6</button>
+    <button class="btn">+</button>
+    <button class="btn">-</button>
+
+    <button class="solve">=</button>
+
+
+    <script>
+        // selector 
+    let ele=  document.getElementsByClassName("box")
+    console.log(ele)
+    // ele[1].innerHTML="my new text"
+
+    // by tag name
+    let ele1 = document.getElementsByTagName("li")
+    console.log(ele1);
+
+    for(let i=0;i<ele1.length;i++){
+        ele1[i].style.color="green"
+        ele1[i].style.backgroundColor="lightgreen"
+    }
+
+    //by name, queryselector 
+    let input=document.getElementsByName("username");
+    console.log(input);
+
+    let node=document.querySelector(".box")
+    console.log(node);
+
+    let nodes=document.querySelectorAll(".box")
+    console.log(nodes);
+
+
+    // get all btn
+    let buttons=document.querySelectorAll(".btn")
+    console.log(buttons);
+    for(let k=0;k<buttons.length;k++){
+        buttons[k].onclick=function(){
+            // console.log("button clicked")
+            let v=buttons[k].innerHTML
+            console.log(v)
+            document.querySelector("#screen").value+=v;
+        }
+    }
+
+    
+    // solve equation
+    let solvebtn=document.querySelector(".solve")
+    solvebtn.onclick=function(){
+        let equa= document.querySelector("#screen").value;
+        let sol=eval(equa)
+        document.querySelector("#screen").value=sol
+    }
+
+    </script>
+</body>
+</html>
