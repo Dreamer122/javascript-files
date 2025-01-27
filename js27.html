@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- form validations -->
+     <!-- onsubmit="return validation()" -->
+     <form action="" name="form1" > 
+    <input type="text" placeholder="username" id="username" name="username"> <label for="" id="uerror" class="error"></label><br>
+    <input type="password" name="password" id="password"> <label for="" id="perror" class="error"></label><br>
+    <input type="submit" value="submit">
+    </form>
+     <script>
+
+        function validation(e){
+            console.log(e)
+            e.preventDefault()
+            let user=document.getElementById("username");
+            let password=document.getElementById("password");
+            let uerror=document.getElementById("uerror");
+            let perror=document.getElementById("perror");
+            let regex_user=/^[A-Za-z]+$/;
+            let regex_pass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{5,15}$/;
+
+            if(user.value.length<2 || !user.value.match(regex_user)){
+                console.log("name is wrong")
+               // alert("invalid username length should be greater than 2");
+               uerror.innerHTML="invalid username length should be greater than 2"
+                return false
+            }
+            else{
+               uerror.innerHTML=""
+
+            }
+            if(!password.value.match(regex_pass)){
+                // alert("passoword is wrong")
+                perror.innerHTML="password should contain letter digit and special character"
+                return false
+            }
+            else{
+                perror.innerHTML=""
+            }
+
+        }
+
+        document.getElementsByName("form1")[0].addEventListener("submit",validation)
+
+
+
+     </script>
+
+</body>
+</html>

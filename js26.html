@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+    primitive non primitive
+    -->
+<script>
+
+// shallow copy and deep copy 
+
+let a=10 // by value 
+let b=a
+b+=2
+console.log(b,a)
+
+
+let obj1={
+    name:"gurpreet",
+    age:20
+}
+let obj2=obj1 // reference shallow copy
+
+obj1.name="vimanyu"
+console.log(obj1,obj2)
+
+// deep copy -> only value
+let obj3={...obj1}
+
+obj3.age=25
+console.log(obj1,obj3)
+
+let array=[7,8,9,6,[67,89,90]]
+let array2=[...array] // by value copy
+
+array.push(78)
+array[4].push(100)
+console.log(array,array2)
+
+
+
+
+
+</script>
+
+</body>
+</html>

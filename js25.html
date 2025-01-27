@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="text"></h1>
+    <!--  destructuring
+    spread operator , rest 
+    template literal  
+    -->
+    <script>
+        // template lietral
+        let name = "John";
+        let age = "30";
+       
+ document.querySelector("#text").innerHTML="my name is"+name+" and my age is "+age
+
+// es6 string interpolation
+document.querySelector("#text").innerHTML =`my name is ${name} and  my age is ${age}`
+
+// destructuring
+// in array
+let array=[89,"js",90,67];
+
+let [a,b,c,y,z]=array
+console.log(a,b,c)
+
+// in object
+let obj={
+    username:"kavish",
+    course:"web dev"
+}
+
+let {username:personname,course}=obj
+console.log(`course= ${course} username= ${personname}`)
+
+// spread operator ...a ...a
+
+let arr2=[6,7,array] // [6,7,[89,"js",90,67]]
+let arr3=[8,9,...array] // ...array spread ope
+console.log(arr3)
+
+let [g,h,...n]=arr2
+console.log("g h n",g,h,n)
+
+function add(a,...para){
+    console.log(a,para)
+
+}
+add(8,9,0,78)
+// console.log()
+
+let userinfo={
+    address:"12sec",
+    ...obj
+}
+let {address,...other}=userinfo
+
+console.log("userinfo=",userinfo)
+console.log("address=",address)
+console.log("other=",other)
+
+
+
+    </script>
+</body>
+</html>

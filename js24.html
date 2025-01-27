@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- json 
+     
+    localstorage
+    -->
+
+    <script>
+        // local storage
+        localStorage.setItem("name","Adarsh") // adding value to localstorage
+        localStorage.setItem("age",25) // adding value to localstorage
+
+        let item=localStorage.getItem("name")
+        console.log(item) // getting value from localstorage
+        document.write(item)
+
+        // clear all data
+        // localStorage.clear()
+        // localStorage.removeItem("name")
+    let n= localStorage.length
+    console.log(n)
+
+  let indx=  localStorage.key(0)
+  console.log(indx)
+
+  let ar=[2,3,4,5]
+  localStorage.setItem("array",ar)
+
+  let array=localStorage.getItem("array")
+  document.write(array)
+  console.log(typeof(array))
+
+  obj={
+    name:"adarsh",
+    age:25
+  }
+
+  localStorage.setItem("object",JSON.stringify(obj)) // convert js object to json object (string)
+
+//   json -> javascript object notation
+let data=localStorage.getItem("object")
+console.log(data)
+document.write(data)
+ let d=JSON.parse(data)
+ console.log(d)
+
+    </script>
+
+</body>
+</html>
