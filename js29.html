@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- synchronous and Asynchronous
+     
+    -->
+    <script>
+     /*   function fun(){
+            console.log("fun function")
+        }
+        setTimeout(fun,2000)
+        console.log("inconsole")
+        setTimeout(()=>{
+            console.log("insetTimeout")
+        },2000)
+        console.log("last console")
+
+*/
+// function doStep1(init) {
+//     setTimeout(()=>{
+//         return init + 1;
+//     },1000)
+// }
+
+// function doStep2(init) {
+//     setTimeout(()=>{
+//   return init + 2;
+// },1000)
+// }
+
+// function doStep3(init) {
+//     setTimeout(()=>{
+//   return init + 3
+//   ;},1000)
+// }
+
+// function doOperation() {
+//   let result = 0;
+//   result = doStep1(result); // 1 , 0->undefined
+//   result = doStep2(result); //3, undefined
+//   result = doStep3(result); //6, undefined
+//   console.log(`result: ${result}`);
+// }
+
+// doOperation();
+
+
+function doStep1(init, callback) {
+  const result = init + 1;
+  callback(result);
+}
+
+function doStep2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
+
+function doStep3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
+
+doStep1(0,(v1)=>{
+    doStep2(v1,(v2)=>{
+        doStep3(v2,(v3)=>{
+            console.log("result=",v3)
+        })
+    })
+})
+
+// function doOperation() {
+//   doStep1(0, (result1) => {
+//     doStep2(result1, (result2) => {
+//       doStep3(result2, (result3) => {
+//         console.log(`result: ${result3}`);
+//       });
+//     });
+//   });
+// }
+
+// doOperation();
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- 
+    oops-> object oriented programming system
+    procedural
+    functional
+
+    class and object 
+
+    -> blueprint
+
+
+    
+    -->
+
+    <script>
+
+        class Calculations{
+            //  it invokes when the object is created
+            constructor(a,b){
+                this.num1=a
+                this.num2=b
+                console.log("constructor function called")
+
+            }
+            add(){
+                return this.num1+this.num2;
+            }
+            sub(){
+                return this.num1-this.num2
+
+            }
+        }
+
+    //     let m1=new Calculations() // object
+    //    let x= m1.add(7,8)
+    //    console.log(x,m1.sub(45,34)) 
+
+    //    let m2=new Calculations()
+    //    m2.add(90,78)
+        // 
+      //  let array=new Array();
+        
+        let d=new Date(2020,5,12)
+        console.log(d)
+
+        let person1=new Calculations(34,23)
+       console.log( person1.add())
+       console.log( person1.sub())
+        let person2=new Calculations(3,2)
+       console.log( person2.add())
+       console.log( person2.sub())
+       console.log( person2.num1)
+
+       // memory location  person1 -> 208
+    //    person2 -> 209
+
+    class Paytm{
+        constructor(name,phone){
+            this.name=name
+            this.phone=phone
+            this.wallet=0
+            console.log("account created successfully")
+        }
+        Add_bal(amnt){
+            this.wallet=this.wallet+amnt
+        }
+        check_bal(){
+            console.log(`balance is ${this.wallet}`)
+        }
+    }
+
+    let ajay=new Paytm("ajay",1234567890)
+    ajay.check_bal()
+    ajay.Add_bal(1000)
+    ajay.check_bal()
+    </script>
+
+</body>
+</html>
