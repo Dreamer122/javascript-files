@@ -49,16 +49,16 @@
         // 
       //  let array=new Array();
         
-        let d=new Date(2020,5,12)
-        console.log(d)
+    //     let d=new Date(2020,5,12)
+    //     console.log(d)
 
-        let person1=new Calculations(34,23)
-       console.log( person1.add())
-       console.log( person1.sub())
-        let person2=new Calculations(3,2)
-       console.log( person2.add())
-       console.log( person2.sub())
-       console.log( person2.num1)
+    //     let person1=new Calculations(34,23)
+    //    console.log( person1.add())
+    //    console.log( person1.sub())
+    //     let person2=new Calculations(3,2)
+    //    console.log( person2.add())
+    //    console.log( person2.sub())
+    //    console.log( person2.num1)
 
        // memory location  person1 -> 208
     //    person2 -> 209
@@ -78,10 +78,39 @@
         }
     }
 
-    let ajay=new Paytm("ajay",1234567890)
-    ajay.check_bal()
-    ajay.Add_bal(1000)
-    ajay.check_bal()
+    // let ajay=new Paytm("ajay",1234567890)
+    // ajay.check_bal()
+    // ajay.Add_bal(1000)
+    // ajay.check_bal()
+
+    // inheritance
+
+    class Paytmv1 extends Paytm {
+        constructor(n,p){
+            super(n,p)
+            this.kyc=false
+        }
+        do_kyc(){
+            this.kyc=true
+            console.log("kyc done")
+        }
+        bank_link(){
+            if(this.kyc){
+                console.log("bank linked")
+            }
+            else{
+                console.log("kyc not done")
+            }
+        }
+    }
+
+    user1=new Paytmv1("ajay",234567890)
+    user1.check_bal()
+    console.log( user1.name)
+    user1.do_kyc()
+    user1.bank_link()
+
+
     </script>
 
 </body>
