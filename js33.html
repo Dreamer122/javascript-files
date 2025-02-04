@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // async await
+
+    //     function fun1(){
+    //         setTimeout(()=>{
+
+    //             console.log("fun1")
+    //             return "login"
+    //         },2000)
+    //     }
+
+    //     console.log("start");
+    //    let x= fun1()
+    //    console.log("x=",x)
+    //     console.log("end");
+        
+
+        // step1
+    //    async function fun2(){
+    //         return "hello"
+    //     }
+    //     let y=fun2()
+    //     console.log("y=",y)
+    //     y.then((data)=>console.log(data))
+
+
+    //    async function fun2(){
+    //         return new Promise((resolve,reject)=>{
+    //             resolve("hello")
+    //         })
+    //     }
+    //     let y=fun2()
+    //     console.log("y=",y)
+    //     y.then((data)=>console.log(data))
+
+   
+    
+   function fun1(){
+    return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+
+                console.log("fun1")
+                resolve( "login")
+            },2000)
+        })
+    }
+
+       async function calledfun(){
+         console.log("start");
+            let result= await fun1()
+            console.log("result=",result)
+            console.log("end");
+        }
+        calledfun()
+
+       
+     
+
+
+    </script>
+
+</body>
+</html>
